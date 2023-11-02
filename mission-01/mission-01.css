@@ -1,7 +1,5 @@
 @import url("./minireset.css");
-
-html {
-}
+/* @import url(./fontello.css); */
 
 body {
   display: flex;
@@ -18,6 +16,8 @@ body {
 .box {
   border: 1px solid #c4c4c4;
   text-align: center;
+
+  position: relative;
 }
 
 .card-link-wide {
@@ -32,7 +32,10 @@ body {
   flex-flow: column;
   justify-content: center;
   padding-bottom: 42px;
+}
+.box p {
   width: 200px;
+  margin: 0 auto;
 }
 .card-link-wide .wide-title h1 {
   line-height: 1;
@@ -40,11 +43,18 @@ body {
 .card-link-wide p {
   margin-top: 13px;
 }
-
 .card-link-normal {
   width: 243px;
   padding: 14px 0;
   font-size: 18px;
+  height: 310px;
+}
+.card-link-normal h1 {
+  line-height: 1;
+}
+.card-link-normal p {
+  margin-top: 10px;
+  margin-bottom: 7px;
 }
 
 .bottom {
@@ -53,4 +63,24 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+}
+
+.purchase-btn {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  padding: 0 16px;
+  height: 42px;
+  border: none;
+  color: #fff;
+  background: url(<path-to-image>), lightgray 50% / contain no-repeat;
+  cursor: pointer;
+  transition: 200ms;
+}
+.purchase-btn:hover {
+  width: 112px;
+  background: #0074e9;
+}
+.purchase-btn:hover::before {
+  content: "구매하기";
 }
