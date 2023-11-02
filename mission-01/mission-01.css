@@ -1,4 +1,4 @@
-@import url(./minireset.css);
+@import url("./minireset.css");
 
 html {
 }
@@ -10,6 +10,9 @@ body {
 
 .container {
   margin-top: 50px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  color: #4e4e4e;
 }
 
 .box {
@@ -19,9 +22,23 @@ body {
 
 .card-link-wide {
   width: 502px;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-evenly;
 }
+.card-link-wide .wide-title {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.card-link-wide figure {
+}
+
 .card-link-normal {
   width: 243px;
+  padding: 14px 0;
+  font-size: 18px;
 }
 
 .bottom {
@@ -30,17 +47,4 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-}
-
-.button {
-  border: none;
-  background: none;
-}
-
-.button a:hover::before {
-  content: "구매하기";
-  width: 112px;
-  height: 42px;
-  background: #0074e9;
-  display: inline-block;
 }
