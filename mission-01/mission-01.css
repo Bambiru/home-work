@@ -24,15 +24,21 @@ body {
   width: 502px;
   font-size: 24px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 20px 28px;
 }
 .card-link-wide .wide-title {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 42px;
+  width: 200px;
 }
-.card-link-wide figure {
+.card-link-wide .wide-title h1 {
+  line-height: 1;
+}
+.card-link-wide p {
+  margin-top: 13px;
 }
 
 .card-link-normal {
