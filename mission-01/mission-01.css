@@ -1,0 +1,46 @@
+@import url(./minireset.css);
+
+html {
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.box {
+  border: 1px solid #c4c4c4;
+  text-align: center;
+}
+
+.card-link-wide {
+  width: 502px;
+}
+.card-link-normal {
+  width: 243px;
+}
+
+.bottom {
+  margin-top: 16px;
+  width: 502px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.button {
+  border: none;
+  background: none;
+}
+
+.button a:hover::before {
+  content: "구매하기";
+  width: 112px;
+  height: 42px;
+  background: #0074e9;
+  display: inline-block;
+}
