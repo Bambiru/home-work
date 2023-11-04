@@ -4,10 +4,6 @@
 
 ## Markup
 
-![레이아웃](https://github.com/Bambiru/home-work/assets/116716953/de3674c4-b70b-48e4-b76f-c713a290adda)
-
-[HTML Markup]
-
 - main.container
   - article.card \* 3
     - h2.card-logo
@@ -17,6 +13,8 @@
     - button.purchase-btn
       - span
 
+![레이아웃](https://github.com/Bambiru/home-work/assets/116716953/de3674c4-b70b-48e4-b76f-c713a290adda)
+
 ###
 
 - fontello가 적용이 안되어서 한참을 애먹었다
@@ -25,8 +23,9 @@
     경로때문이라는 것을 알게되었다.
     그냥 가져온 파일일지라도 한 번 들여다보는 습관을 가져야 할 것 같다.
 
-- 처음에 class="card-link-normal" 부분의 article들을 section으로 묶었다가
-  같은 구조를 사용하고 싶어 구조를 수정하였다.
+- 처음에 class="card-link-normal" 부분의 article들을
+  section으로 묶었다가 같은 구조를 사용하고 싶어
+  구조를 수정하였다.
   매번 flex-wrap을 nowrap으로만 사용했었는데, wrap을 이용하여,
   구조를 무의미하게 묶지않고 css로 처리 할 수 있었다.
 
