@@ -1,5 +1,4 @@
-@import url("./minireset.css");
-/* @import url(./fontello.css); */
+@import url("./fontello.css");
 
 body {
   display: flex;
@@ -11,12 +10,17 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 700;
   color: #4e4e4e;
+
+  /* 추가 */
+  width: 502px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .box {
   border: 1px solid #c4c4c4;
   text-align: center;
-
   position: relative;
 }
 
@@ -26,6 +30,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 20px 28px;
+  margin-bottom: 16px;
 }
 .card-link-wide .wide-title {
   display: flex;
@@ -37,7 +42,8 @@ body {
   width: 200px;
   margin: 0 auto;
 }
-.card-link-wide .wide-title h1 {
+.card-link-wide .wide-title h1,
+.card-link-normal h1 {
   line-height: 1;
 }
 .card-link-wide p {
@@ -49,38 +55,33 @@ body {
   font-size: 18px;
   height: 310px;
 }
-.card-link-normal h1 {
-  line-height: 1;
-}
 .card-link-normal p {
   margin-top: 10px;
   margin-bottom: 7px;
-}
-
-.bottom {
-  margin-top: 16px;
-  width: 502px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
 }
 
 .purchase-btn {
   position: absolute;
   left: 20px;
   bottom: 20px;
-  padding: 0 16px;
+  /* padding: 0 16px; */
+  width: 42px;
   height: 42px;
   border: none;
   color: #fff;
   background: url(<path-to-image>), lightgray 50% / contain no-repeat;
   cursor: pointer;
-  transition: 200ms;
+  transition: color 200ms, width 100ms;
+  white-space: nowrap;
 }
-.purchase-btn:hover {
+
+.purchase-btn:hover,
+.purchase-btn:focus {
   width: 112px;
   background: #0074e9;
 }
-.purchase-btn:hover::before {
+
+.purchase-btn:hover::before,
+.purchase-btn:focus::before {
   content: "구매하기";
 }
