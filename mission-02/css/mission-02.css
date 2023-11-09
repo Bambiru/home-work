@@ -1,0 +1,26 @@
+.header {
+  background: var(--grayscale----white);
+}
+.header-inner {
+  width: 740px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 50px;
+  line-height: 50px;
+}
+.navigation-list {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 8px;
+  color: var(--primary----blue-1);
+  font-weight: 400;
+  & .is-active {
+    font-weight: bold;
+  }
+}
+.navigation-list li:hover {
+  font-weight: bold;
+}
