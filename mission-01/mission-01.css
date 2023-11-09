@@ -28,7 +28,7 @@ body {
   font-size: 24px;
   display: flex;
   flex-flow: column wrap;
-  
+
   justify-content: center;
   padding: 20px 28px;
   margin-bottom: 16px;
@@ -71,6 +71,9 @@ body {
   cursor: pointer;
   transition: color 200ms, width 100ms;
   white-space: nowrap;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 42px;
 }
 
 .purchase-btn:hover,
