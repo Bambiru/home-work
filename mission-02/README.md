@@ -66,20 +66,25 @@
   width: 16px;
   height: 16px;
 }
---valid-- > .user-email input:valid ~ span::after {
+<!--valid-- > 
+.user-email input:valid ~ span::after {
   background: url(../assets/images/check.png) no-repeat;
   background-size: contain;
 }
 
-<!--invalid-- > .user-form input:invalid:not(:placeholder-shown) ~ span::after {
+<!--invalid-- > 
+.user-form input:invalid:not(:placeholder-shown) ~ span::after {
   background: url(../assets/images/warning.png) no-repeat;
   background-size: contain;
 }
-<!--password-- > <!--hidden-- > .user-password input:valid ~ .hidden::after {
+<!--password-- > 
+  <!--hidden-- > 
+.user-password input:valid ~ .hidden::after {
   background: url(../assets/images/hidden.png) no-repeat;
   background-size: contain;
 }
-<!-- visible -- > .user-password input:valid ~ .visible::after {
+  <!--visible-- > 
+.user-password input:valid ~ .visible::after {
   background: url(../assets/images/visible.png) no-repeat;
   background-size: contain;
 }
