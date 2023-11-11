@@ -8,7 +8,7 @@
       name="description"
       content="이디야 커피 브랜드 사이트 로그인 페이지"
     />
-    <link rel="icon" href="./favicon/favicon.svg" />
+    <link rel="icon" href=".assets/favicon/favicon.svg" />
     <!-- 웹폰트 -->
     <link
       href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
@@ -17,32 +17,9 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/mission-02.css" />
+    <script src="./js/mission-02.js" defer></script>
   </head>
   <body>
-    <!-- header -->
-    <header class="header">
-      <!-- LOGO -->
-      <div class="header-inner">
-        <h1 class="logo">
-          <a href="#">
-            <em class="sr-only">로고</em>
-            <img src="./images/logo.svg" alt="이디야커피" />
-          </a>
-        </h1>
-        <!-- nav -->
-        <nav class="navigation">
-          <ul class="navigation-list">
-            <li><a href="#">이디야 디자인</a></li>
-            <li class="is-active"><a href="#">로그인</a></li>
-            <li><a href="#">회원가입</a></li>
-            <li><a href="#">이디야 음료</a></li>
-            <li><a href="#">이디야 뉴스</a></li>
-            <li><a href="#">매장 찾기</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
     <main class="main">
       <div class="main-inner">
         <div class="login-headline">
@@ -53,29 +30,42 @@
         <form action="/" method="post" class="login-form">
           <fieldset class="reset-box">
             <legend class="sr-only">회원 로그인 폼</legend>
-            <div class="user-from user-email">
+            <div class="user-form user-email">
               <input
                 type="email"
                 name="userEmail"
                 id="userEmail"
                 required
+                autocomplete="off"
                 placeholder="yamoo9@euid.dev"
               />
               <label for="userEmail">이메일</label>
+              <span></span>
+              <em>이메일 입력 방법이 잘못되었습니다. (예: user@domain.io) </em>
             </div>
-            <div class="user-from user-password">
+            <div class="user-form user-password">
               <input
                 type="password"
                 name="userPassword"
                 id="userPassword"
                 required
+                autocomplete="off"
                 placeholder="숫자, 영어 조합 6자 이상"
+                minlength="6"
+                pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{6,50}$"
               />
               <label for="userPassword">패스워드</label>
+              <span id="status-icon" class="hidden"></span>
+              <em>패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.</em>
             </div>
             <div class="email-save-checkbox">
-              <input type="checkbox" name="emailSave" id="emailSave" />
-              <label for="emailSave">이메일 저장</label>
+              <input
+                type="checkbox"
+                name="emailSave"
+                id="emailSave"
+                class="input-checkbox sr-only"
+              />
+              <label for="emailSave" class="checkbox-label">이메일 저장</label>
             </div>
           </fieldset>
           <div class="buttons">

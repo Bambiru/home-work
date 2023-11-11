@@ -1,47 +1,13 @@
-.header {
-  background: var(--grayscale----white);
-  height: 50px;
-  line-height: 50px;
-  width: 100%;
-
-  position: absolute;
-  z-index: 100;
-}
-.header-inner {
-  width: 740px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.navigation-list {
-  display: flex;
-  flex-flow: row nowrap;
-  column-gap: 8px;
-  color: var(--primary----blue-1);
-  font-weight: 400;
-  font-size: 0.9375rem;
-  & .is-active {
-    font-weight: bold;
-  }
-}
-.navigation-list li:hover {
-  font-weight: bold;
-}
-
 /* main */
 .main {
   background: var(--primary----blue-1);
-  background: url(../images/coffee-desktop.jpg) no-repeat 100% 100%;
+  background: url(../assets/images/coffee.jpg) no-repeat 100% 100%;
   background-size: cover;
 
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
 
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -51,7 +17,6 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  transform: translateY(-50px);
   row-gap: 100px;
 }
 
@@ -86,48 +51,111 @@
   margin-bottom: 53px;
 }
 
-.user-from {
+.user-form {
   position: relative;
-  border-bottom: 1px solid var(--grayscale----white);
 }
 
-.user-from input {
-  display: block;
+.user-form input {
   width: 100%;
   height: 3rem;
   font-size: 1.125rem;
   line-height: 1;
   color: var(--grayscale----white);
   padding: 24px 8px 8px;
-}
-
-.user-from input::placeholder {
-  color: transparent;
-}
-.user-from input:focus::placeholder {
-  color: var(--grayscale----white);
+  border-bottom: 1px solid var(--grayscale----white);
   opacity: 0.7;
 }
-/* .user-from input:valid + label */
-.user-from label {
+
+.user-form input:valid ~ span::after,
+.user-form input:invalid:not(:placeholder-shown) ~ span::after {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  content: "";
+  width: 16px;
+  height: 16px;
+}
+.user-email input:valid ~ span::after {
+  background: url(../assets/images/check.png) no-repeat;
+  background-size: contain;
+}
+.user-form input:invalid:not(:placeholder-shown) ~ span::after {
+  background: url(../assets/images/warning.png) no-repeat;
+  background-size: contain;
+}
+
+.user-password input:valid ~ .hidden::after {
+  background: url(../assets/images/hidden.png) no-repeat;
+  background-size: contain;
+}
+
+.user-password input:valid ~ .visible::after {
+  background: url(../assets/images/visible.png) no-repeat;
+  background-size: contain;
+}
+
+.user-form input:valid,
+.user-form input:invalid:not(:placeholder-shown) {
+  border-bottom: 2px solid var(--grayscale----white);
+  opacity: 1;
+}
+
+.user-form input::placeholder {
+  color: transparent;
+}
+.user-form input:focus::placeholder {
+  color: var(--grayscale----white);
+}
+
+.user-form label {
   position: absolute;
   top: 14px;
   left: 8px;
   transition: top 0.2s ease-in-out;
 }
 
-.user-from input:focus + label,
-.user-from input:valid + label {
+.user-form input:focus + label,
+.user-form input:valid + label,
+.user-form input:invalid:not(:placeholder-shown) + label {
   font-size: 0.8125rem;
   top: 0;
   left: 0;
 }
-
-.user-from input:invalid + label {
+.user-form em {
+  display: none;
+}
+.user-form input:invalid:not(:placeholder-shown) ~ em {
+  display: block;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
 }
 
+/* checkbox */
 .email-save-checkbox {
-  margin-top: 14px;
+  margin-top: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+}
+
+.checkbox-label {
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.checkbox-label::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url(../assets/images/un_check.png) no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.input-checkbox:checked + .checkbox-label::before {
+  background: url(../assets/images/checked.png) no-repeat;
 }
 
 /* 버튼 */
@@ -142,6 +170,7 @@
   height: 48px;
   line-height: 48px;
   cursor: pointer;
+  border: none;
 
   border-radius: 8px;
   text-align: center;
@@ -156,4 +185,21 @@
   background: transparent;
   border: 1px solid var(--grayscale----gray);
   color: var(--grayscale----white);
+}
+
+@media (max-width: 600px) {
+  .main {
+    background: url(../assets/images/coffee.jpg) no-repeat 20%;
+    background-size: cover;
+  }
+  .login-form {
+    padding: 0 32px;
+  }
+  .buttons {
+    flex-flow: row wrap;
+    row-gap: 15px;
+  }
+  .button {
+    width: 100%;
+  }
 }
