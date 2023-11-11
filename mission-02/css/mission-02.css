@@ -1,5 +1,11 @@
 .header {
   background: var(--grayscale----white);
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+
+  position: absolute;
+  z-index: 100;
 }
 .header-inner {
   width: 740px;
@@ -7,9 +13,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  height: 50px;
-  line-height: 50px;
 }
 .navigation-list {
   display: flex;
@@ -17,10 +20,140 @@
   column-gap: 8px;
   color: var(--primary----blue-1);
   font-weight: 400;
+  font-size: 0.9375rem;
   & .is-active {
     font-weight: bold;
   }
 }
 .navigation-list li:hover {
   font-weight: bold;
+}
+
+/* main */
+.main {
+  background: var(--primary----blue-1);
+  background: url(../images/coffee-desktop.jpg) no-repeat 100% 100%;
+  background-size: cover;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.main-inner {
+  width: 540px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50px);
+  row-gap: 100px;
+}
+
+.login-headline {
+  text-align: center;
+  & .login-title {
+    line-height: 1;
+    margin-bottom: 24px;
+    font-weight: 100;
+    font-size: var(--designSystem--section-title);
+  }
+
+  & .greetings-en {
+    font-size: 1.125rem;
+  }
+  & .greetings-ko {
+    font-size: 0.75rem;
+    font-weight: 300;
+  }
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-form input {
+  border: none;
+  background: none;
+}
+
+.user-email {
+  margin-bottom: 53px;
+}
+
+.user-from {
+  position: relative;
+  border-bottom: 1px solid var(--grayscale----white);
+}
+
+.user-from input {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  font-size: 1.125rem;
+  line-height: 1;
+  color: var(--grayscale----white);
+  padding: 24px 8px 8px;
+}
+
+.user-from input::placeholder {
+  color: transparent;
+}
+.user-from input:focus::placeholder {
+  color: var(--grayscale----white);
+  opacity: 0.7;
+}
+/* .user-from input:valid + label */
+.user-from label {
+  position: absolute;
+  top: 14px;
+  left: 8px;
+  transition: top 0.2s ease-in-out;
+}
+
+.user-from input:focus + label,
+.user-from input:valid + label {
+  font-size: 0.8125rem;
+  top: 0;
+  left: 0;
+}
+
+.user-from input:invalid + label {
+}
+
+.email-save-checkbox {
+  margin-top: 14px;
+}
+
+/* 버튼 */
+.buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.button {
+  width: 260px;
+  height: 48px;
+  line-height: 48px;
+  cursor: pointer;
+
+  border-radius: 8px;
+  text-align: center;
+
+  font-size: 1.25rem;
+  background: var(--grayscale----white);
+  color: var(--primary----blue-1);
+  font-weight: bold;
+}
+
+.signup-button {
+  background: transparent;
+  border: 1px solid var(--grayscale----gray);
+  color: var(--grayscale----white);
 }

@@ -42,5 +42,48 @@
         </nav>
       </div>
     </header>
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="login-headline">
+          <h1 class="login-title">로그인</h1>
+          <p lang="en" class="greetings-en">Welcome, Ediya Coffee</p>
+          <p class="greetings-ko">이디야커피에 오신 것을 환영합니다.</p>
+        </div>
+        <form action="/" method="post" class="login-form">
+          <fieldset class="reset-box">
+            <legend class="sr-only">회원 로그인 폼</legend>
+            <div class="user-from user-email">
+              <input
+                type="email"
+                name="userEmail"
+                id="userEmail"
+                required
+                placeholder="yamoo9@euid.dev"
+              />
+              <label for="userEmail">이메일</label>
+            </div>
+            <div class="user-from user-password">
+              <input
+                type="password"
+                name="userPassword"
+                id="userPassword"
+                required
+                placeholder="숫자, 영어 조합 6자 이상"
+              />
+              <label for="userPassword">패스워드</label>
+            </div>
+            <div class="email-save-checkbox">
+              <input type="checkbox" name="emailSave" id="emailSave" />
+              <label for="emailSave">이메일 저장</label>
+            </div>
+          </fieldset>
+          <div class="buttons">
+            <button type="submit" class="button login-button">로그인</button>
+            <a href="/" class="button signup-button">회원가입</a>
+          </div>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
