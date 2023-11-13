@@ -1,0 +1,16 @@
+.logo-components {
+  margin: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 50px;
+
+  background: black;
+}
+
+.logo-white path {
+  fill: #fff;
+}
+
+.logo-outline path {
+  fill: transparent;
+}
