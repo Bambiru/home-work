@@ -1,0 +1,6 @@
+.components {
+  margin: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 50px;
+}
