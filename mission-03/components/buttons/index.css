@@ -2,9 +2,15 @@
   margin: 50px;
   display: flex;
   flex-flow: column nowrap;
-  row-gap: 50px;
+  row-gap: 24px;
+}
+.button-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 17px;
 }
 
+/* 컴포넌트 시작 */
 .button {
   cursor: pointer;
   font-weight: bold;
@@ -46,4 +52,16 @@
   padding: 8px 20px;
   border-radius: var(--radius);
   font-size: var(--text-normal-bold);
+}
+
+.button-arrow {
+  padding: 15px 20px;
+  font-size: var(--title-x-small);
+
+  & .left-arrow {
+    padding-left: 10px;
+  }
+  & .right-arrow {
+    padding-right: 10px;
+  }
 }
