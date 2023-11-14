@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <title>input 컴포넌트</title>
+    <link rel="stylesheet" href="/css/mission-03.css" />
+  </head>
+  <body>
+    <div class="input-components">
+      <!-- Dark : email  -->
+      <div class="input-area">
+        <input
+          type="email"
+          name="userEmail"
+          id="userEmail"
+          autocomplete="off"
+          class="input-reset"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          placeholder=""
+        />
+        <label for="userEmail">레이블</label>
+        <span class="error-message">오류 메세지를 출력합니다.</span>
+      </div>
+      <!-- Dark : password  -->
+      <div class="input-area">
+        <input
+          type="password"
+          name="userPassword"
+          id="userPassword"
+          autocomplete="off"
+          class="input-reset"
+          required
+          pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{4,60}$"
+          placeholder=""
+        />
+        <label for="userPassword">비밀번호</label>
+        <span class="error-message"
+          >비밀번호는 영문, 숫자 조합 4-60자 사이 값을 입력합니다.</span
+        >
+      </div>
+
+      <!-- Light : email -->
+      <div class="input-area light-bg">
+        <input
+          type="email"
+          name="userEmail"
+          id="userEmail"
+          autocomplete="off"
+          class="input-reset"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          placeholder=""
+        />
+        <label for="userEmail">레이블</label>
+        <span class="error-message">오류 메세지를 출력합니다.</span>
+      </div>
+      <!-- Light : password -->
+      <div class="input-area light-bg">
+        <input
+          type="password"
+          name="userPassword"
+          id="userPassword"
+          autocomplete="off"
+          class="input-reset"
+          required
+          pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{4,60}$"
+          placeholder=""
+        />
+        <label for="userPassword">비밀번호</label>
+        <span class="error-message"
+          >비밀번호는 영문, 숫자 조합 4-60자 사이 값을 입력합니다.</span
+        >
+      </div>
+    </div>
+  </body>
+</html>
