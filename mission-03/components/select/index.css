@@ -7,6 +7,7 @@
 }
 
 .btn-select {
+  min-width: 113px;
   border: 1px solid var(--gray-500, #757575);
   padding: 12px 10px;
   border-radius: 2px;
@@ -14,12 +15,14 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  justify-content: space-between;
   column-gap: 8px;
   outline: none;
 }
 
 .btn-select:focus {
-  border: 3px solid var(--green-500, #2ede75);
+  border: 1px solid var(--green-500, #2ede75);
+  outline: 2px solid var(--green-500, #2ede75);
 }
 
 .btn-select::before,
@@ -35,4 +38,51 @@
 }
 .btn-select::after {
   background: url(./../../assets/images/bi_caret-down-fill.svg);
+}
+
+.select-list {
+  width: 120px;
+  border-radius: 12px;
+  opacity: 0.96;
+  background: var(--gray-100, #e3e3e3);
+  margin-top: 5px;
+  padding: 16px 0;
+}
+.select-list li {
+}
+.select-list .option-button {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+  column-gap: 5px;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.select-list .option-button:focus {
+  background: var(--gray-500);
+  opacity: 0.8;
+  border: none;
+  outline: none;
+}
+
+.select-list .option-button::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 10px;
+}
+.select-list .option-button.checked::before {
+  background: url(./../../assets/images/select-check.svg);
+}
+
+.select-list .option-button {
+  color: var(--Black, #010101);
+  /* Text/normal (bold) */
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5; /* 24px */
+  letter-spacing: -0.008px;
 }
