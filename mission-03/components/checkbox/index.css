@@ -1,0 +1,33 @@
+.checkbox-components {
+  margin: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 50px;
+  background: #000;
+  padding: 20px;
+}
+
+.login-save + label {
+  color: var(--gray-300, #acacac);
+  font-size: var(--text-small);
+  line-height: 1.5; /* 21px */
+  letter-spacing: -0.007px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  column-gap: 5px;
+}
+.login-save + label::before {
+  display: inline-block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: url(./../../assets/images/checkbox.png);
+  background-repeat: no-repeat;
+}
+
+.login-save:checked + label:before {
+  background: url(./../../assets/images/checkbox-checked.png);
+  background-repeat: no-repeat;
+}

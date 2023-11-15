@@ -1,0 +1,38 @@
+.select-components {
+  margin: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 50px;
+  padding: 20px;
+}
+
+.btn-select {
+  border: 1px solid var(--gray-500, #757575);
+  padding: 12px 10px;
+  border-radius: 2px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  column-gap: 8px;
+  outline: none;
+}
+
+.btn-select:focus {
+  border: 3px solid var(--green-500, #2ede75);
+}
+
+.btn-select::before,
+.btn-select::after {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 16px;
+}
+
+.btn-select::before {
+  background: url(./../../assets/images/global.svg);
+}
+.btn-select::after {
+  background: url(./../../assets/images/bi_caret-down-fill.svg);
+}
