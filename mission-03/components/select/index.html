@@ -2,21 +2,19 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>select 컴포넌트</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/style.js" />
+    <script src="/js/main.js" defer></script>
   </head>
   <body>
     <div class="select-components">
-      <article class="select-wrapper">
-        <button class="btn-select button-none" role="select" lang="en">
-          <!-- Language -->
-          언어
-        </button>
+      <div class="select-wrapper">
+        <h2 class="sr-only">select박스</h2>
+        <button class="btn-select button-none">언어</button>
         <ul class="select-list">
           <li role="option">
-            <button type="button" class="option-button button-none checked">
+            <button type="button" class="option-button button-none">
               한국어
             </button>
           </li>
@@ -26,7 +24,7 @@
             </button>
           </li>
         </ul>
-      </article>
+      </div>
     </div>
   </body>
 </html>

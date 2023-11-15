@@ -21,6 +21,9 @@
 }
 
 .btn-select:focus {
+  outline: none;
+}
+.btn-select:focus-visible {
   border: 1px solid var(--green-500, #2ede75);
   outline: 2px solid var(--green-500, #2ede75);
 }
@@ -47,9 +50,15 @@
   background: var(--gray-100, #e3e3e3);
   margin-top: 5px;
   padding: 16px 0;
+  /* 초기 비활성화 */
+  display: none;
 }
-.select-list li {
+
+/* 활성화 */
+.btn-select.is-active + .select-list {
+  display: block;
 }
+
 .select-list .option-button {
   display: flex;
   flex-flow: row nowrap;
@@ -61,7 +70,8 @@
   padding-left: 20px;
 }
 
-.select-list .option-button:focus {
+.select-list .option-button:focus,
+.select-list .option-button:hover {
   background: var(--gray-500);
   opacity: 0.8;
   border: none;
