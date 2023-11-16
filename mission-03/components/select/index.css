@@ -97,7 +97,7 @@
 .select-list .option-button {
   color: var(--Black, #010101);
   /* Text/normal (bold) */
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.5; /* 24px */
   letter-spacing: -0.008px;

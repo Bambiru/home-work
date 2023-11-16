@@ -23,7 +23,7 @@
     padding: 18px 20px;
 
     color: var(--white);
-    font-size: var(--text-normal);
+    font-size: 1rem;
     line-height: 1.5; /* 24px */
     letter-spacing: -0.008px;
 
@@ -33,7 +33,7 @@
       padding: 26px 20px 10px;
       & + label {
         color: var(--red-500, #e50914);
-        font-size: var(--text-x-small);
+        font-size: 0.75rem;
         font-weight: 700;
         line-height: 1.5; /* 18px */
         letter-spacing: -0.006px;
@@ -47,7 +47,7 @@
       & ~ .error-message {
         display: block;
         color: var(--red-500, #e50914);
-        font-size: var(--text-small);
+        font-size: 0.75rem;
         font-weight: 700;
         line-height: 1.5; /* 21px */
         letter-spacing: -0.007px;

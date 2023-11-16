@@ -52,12 +52,12 @@
   height: 40px;
   padding: 0 20px;
   border-radius: var(--radius);
-  font-size: var(--text-normal-bold);
+  font-size: 1rem;
 }
 
 .button-arrow {
   padding: 15px 20px;
-  font-size: var(--title-x-small);
+  font-size: 1.375rem;
 
   & .left-arrow {
     padding-left: 10px;
