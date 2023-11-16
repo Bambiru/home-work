@@ -64,7 +64,6 @@
   color: var(--gray-500);
 
   & input {
-    border: 1px solid var(--gray-200, #c8c8c8);
     color: var(--gray-800, #2f2f2f);
   }
 }

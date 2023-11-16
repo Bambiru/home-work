@@ -6,6 +6,10 @@
   padding: 20px;
 }
 
+.select-wrapper {
+  position: relative;
+}
+
 .btn-select {
   min-width: 113px;
   border: 1px solid var(--gray-500, #757575);
@@ -44,6 +48,8 @@
 }
 
 .select-list {
+  position: absolute;
+
   width: 120px;
   border-radius: 12px;
   opacity: 0.96;

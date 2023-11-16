@@ -1,19 +1,22 @@
-const btnSelect = document.querySelector(".btn-select");
+const btnSelect = document.querySelectorAll(".btn-select");
 const optionBtns = document.querySelectorAll(".option-button");
 let selectedOption = "";
 
-btnSelect.addEventListener("click", () => {
-  btnSelect.classList.toggle("is-active");
-});
-
-optionBtns.forEach((item) => {
+btnSelect.forEach((item) => {
+  console.log(item);
   item.addEventListener("click", () => {
-    btnSelect.textContent = item.textContent;
+    item.classList.toggle("is-active");
+  });
 
-    optionBtns.forEach((button) => {
-      button.classList.remove("checked");
+  optionBtns.forEach((lang) => {
+    lang.addEventListener("click", () => {
+      item.textContent = lang.textContent;
+
+      optionBtns.forEach((button) => {
+        button.classList.remove("checked");
+      });
+      lang.classList.add("checked");
+      item.classList.remove("is-active");
     });
-    item.classList.add("checked");
-    btnSelect.classList.remove("is-active");
   });
 });

@@ -9,11 +9,16 @@
   </head>
   <body>
     <div class="select-components">
-      <div class="select-wrapper">
-        <h2 class="sr-only">select박스</h2>
-        <button class="btn-select button-none">언어</button>
-        <ul class="select-list">
-          <li role="option">
+      <div class="select-wrapper" role="listbox" aria-label="언어 선택">
+        <button
+          class="btn-select button-none"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+        >
+          언어
+        </button>
+        <ul class="select-list" aria-hidden="true">
+          <li role="option" aria-selected="true">
             <button type="button" class="option-button button-none">
               한국어
             </button>

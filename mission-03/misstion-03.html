@@ -5,8 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>넷플릭스</title>
     <link rel="icon" href="./assets/favicon/favicon.svg" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/mission-03.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./misstion-03.css" />
+    <script src="/js/main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <a href="#" class="logo-red netflix-logo" aria-label="NETFLIX">
+          <svg
+            width="210"
+            height="57"
+            viewBox="0 0 210 57"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M198.768 27.1332L210 57C206.689 56.5245 203.38 55.9297 200.009 55.3954L193.682 38.8904L187.18 54.0313C183.988 53.497 180.853 53.3172 177.661 52.9022L189.072 26.777L178.725 0H188.304L194.097 14.961L200.306 0H210L198.768 27.1332ZM171.158 0H162.467V51.775C165.305 51.953 168.261 52.0706 171.158 52.4268V0ZM154.958 51.1801C147.036 50.6459 139.113 50.1722 131.015 49.9923V0H139.881V41.5617C144.967 41.681 150.051 42.096 154.958 42.3328V51.1801ZM121.554 20.2466V29.1527H109.436V49.3993H100.685V0H125.516V8.90608H109.436V20.2466H121.554ZM85.7857 8.90608V49.8748C82.8296 49.8748 79.8151 49.8748 76.9175 49.9923V8.90608H67.7533V0H95.0085V8.90608H85.7857ZM58.1758 29.6264C54.2746 29.6264 49.6623 29.6264 46.3516 29.8063V43.047C51.5544 42.689 56.7572 42.2741 62.0185 42.096V50.6459L37.4835 52.6066V0H62.0185V8.90608H46.3516V20.8984C49.7811 20.8984 55.0424 20.7203 58.1758 20.7203V29.6264ZM9.04547 24.64V55.7516C5.85358 56.1096 3.01457 56.5245 0 57V0H8.45497L19.983 32.36V0H28.8512V53.3172C25.7178 53.8532 22.5259 54.0313 19.1549 54.505L9.04547 24.64Z"
+              fill="#E50914"
+            />
+          </svg>
+        </a>
+
+        <div class="lang-button">
+          <div class="select-wrapper" role="listbox" aria-label="언어 선택">
+            <button
+              class="btn-select button-none"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              언어
+            </button>
+            <ul class="select-list" aria-hidden="true">
+              <li role="option" aria-selected="true">
+                <button type="button" class="option-button button-none">
+                  한국어
+                </button>
+              </li>
+              <li role="option" lang="en">
+                <button type="button" class="option-button button-none">
+                  English
+                </button>
+              </li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            class="button button-none button-color button-rounded"
+          >
+            로그인
+          </button>
+        </div>
+      </header>
+      <main class="main">
+        <article class="promotion">
+          <h1 class="sr-only">프로모션</h1>
+          <h2>영화, TV프로그램을 무제한으로.</h2>
+          <p>다양한 디바이스에서 시청하세요. 언제든 해지하실 수 있습니다.</p>
+          <p>
+            시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일
+            주소를 입력하세요.
+          </p>
+          <div class="new-member-email">
+            <div class="input-area light-bg">
+              <input
+                type="email"
+                name="userEmail"
+                id="userEmail"
+                autocomplete="off"
+                class="input-reset"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                placeholder=""
+              />
+              <label for="userEmail">이메일 주소</label>
+              <span class="error-message">오류 메세지를 출력합니다.</span>
+            </div>
+            <button
+              type="button"
+              class="netflix-free-btn button-arrow button-none button-color"
+            >
+              <span class="right-arrow">30일 무료 이용</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="16"
+                viewBox="0 0 22 16"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.3431 0.928941L21.7071 7.2929C22.0976 7.68343 22.0976 8.31659 21.7071 8.70712L15.3431 15.0711C14.9526 15.4616 14.3195 15.4616 13.9289 15.0711C13.5384 14.6806 13.5384 14.0474 13.9289 13.6569L18.5858 9.00001H1C0.447715 9.00001 0 8.55229 0 8.00001C0 7.44772 0.447715 7.00001 1 7.00001H18.5858L13.9289 2.34315C13.5384 1.95263 13.5384 1.31947 13.9289 0.928941C14.3195 0.538416 14.9526 0.538416 15.3431 0.928941Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+          <p>신규 회원만 이 프로모션을 이용하실 수 있습니다.</p>
+        </article>
+      </main>
+      <footer class="footer">
+        <h2 class="footer-name">Netflix 대한민국</h2>
+
+        <em class="inquiry-call"
+          >질문이 있으신가요? <span class="moblie-block">문의 전화: 00-308-321-0058</span></em
+        >
+
+        <div class="footer-lang lang-button">
+          <div class="select-wrapper" role="listbox" aria-label="언어 선택">
+            <button
+              class="btn-select button-none"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              언어
+            </button>
+            <ul class="select-list" aria-hidden="true">
+              <li role="option" aria-selected="true">
+                <button type="button" class="option-button button-none">
+                  한국어
+                </button>
+              </li>
+              <li role="option" lang="en">
+                <button type="button" class="option-button button-none">
+                  English
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="footer-list">
+          <li><a href="/">자주 묻는 질문</a></li>
+          <li><a href="/">고객센터</a></li>
+          <li><a href="/">계정</a></li>
+          <li><a href="/">미디어 센터</a></li>
+          <li><a href="/">투자 정보(IR)</a></li>
+          <li><a href="/">입사 정보</a></li>
+          <li><a href="/">Netflix 지원 디바이스</a></li>
+          <li><a href="/">이용 약관</a></li>
+          <li><a href="/">개인정보</a></li>
+          <li><a href="/">쿠키 설정</a></li>
+          <li><a href="/">회사 정보</a></li>
+          <li><a href="/">문의하기</a></li>
+          <li><a href="/">속도 테스트</a></li>
+          <li><a href="/">법적 고지</a></li>
+          <li><a href="/">Netflix 오리지널</a></li>
+        </ul>
+
+        <address class="netflix-address">
+          <span>넷플릭스서비시스코리아 유한회사</span>
+          <span>통신판매업신고번호:제2018-서울종로-0426호</span>
+          <span>전화번호: 00-308-321-0058</span>
+          <span>대표: 레지널드 숀 톰프슨</span>
+          <span>이메일 주소: korea@netflix.com</span>
+          <span
+            >주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층
+            우편번호 03161</span
+          >
+          <span>사업자 등록번호:165-87-00119</span>
+          <span>클라우드 호스팅: Amazon Web Services Inc. </span>
+          <span>공정거래위원회 웹사이트</span>
+        </address>
+      </footer>
+    </div>
+  </body>
 </html>
